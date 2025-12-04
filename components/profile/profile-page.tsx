@@ -241,7 +241,7 @@ const ProfilePage = () => {
                   View Products
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/linktree"
                   className="px-6 py-3 bg-white border-2 border-amber-900 text-amber-900 rounded-full font-bold hover:bg-amber-50 transition-all duration-300 hover:scale-105 text-center"
                 >
                   Contact Us
@@ -497,7 +497,7 @@ const ProfilePage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/linktree"
               className="px-8 py-4 bg-amber-400 text-amber-950 rounded-full font-bold text-lg hover:bg-amber-300 transition-all duration-300 hover:scale-105 shadow-xl"
             >
               Get in Touch

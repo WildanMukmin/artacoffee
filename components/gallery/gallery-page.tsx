@@ -9,6 +9,7 @@ import {
   Video,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 interface GalleryItem {
@@ -408,18 +409,18 @@ const GalleryPage = () => {
             learn more about our process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
+            <Link
+              href="/linktree"
               className="px-8 py-4 bg-amber-400 text-amber-950 rounded-full font-bold text-lg hover:bg-amber-300 transition-all duration-300 hover:scale-105 shadow-xl"
             >
               Get in Touch
-            </a>
-            <a
+            </Link>
+            <Link
               href="/product"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
             >
               View Products
-            </a>
+            </Link>
           </div>
         </div>
       </section>

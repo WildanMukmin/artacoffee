@@ -32,7 +32,7 @@ export default function Footer() {
 
             {/* Social Media */}
             <div className="flex space-x-4">
-              <a
+              <Link
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -40,8 +40,8 @@ export default function Footer() {
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -49,8 +49,8 @@ export default function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -58,7 +58,7 @@ export default function Footer() {
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -108,21 +108,21 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-amber-300 shrink-0" />
-                <a
+                <Link
                   href="mailto:info@artacoffee.com"
                   className="text-amber-200 hover:text-white transition-colors"
                 >
                   info@artacoffee.com
-                </a>
+                </Link>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-amber-300 shrink-0" />
-                <a
+                <Link
                   href="tel:+62123456789"
                   className="text-amber-200 hover:text-white transition-colors"
                 >
                   +62 123 456 789
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
