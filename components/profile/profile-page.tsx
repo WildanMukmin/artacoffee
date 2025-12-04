@@ -6,127 +6,185 @@ import {
   Calendar,
   CheckCircle,
   Coffee,
-  HomeIcon,
   Leaf,
   Store,
   Trophy,
   Users,
+  Target,
+  Eye,
+  Shield,
+  TrendingUp,
+  Heart,
 } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
 
 const ProfilePage = () => {
   const team = [
     {
-      name: "Barli Halim",
-      position: "Commissioner",
-      image: "/foto/barli.jpeg",
+      name: "John Anderson",
+      position: "CEO & Founder",
+      image: "/team/ceo.jpg",
+      bio: "20+ years in coffee industry",
     },
     {
-      name: "Edi Yanto",
-      position: "Director",
-      image: "/foto/edi.jpeg",
+      name: "Sarah Martinez",
+      position: "Operations Director",
+      image: "/team/director.jpg",
+      bio: "Expert in supply chain management",
     },
     {
-      name: "Radianto STP",
-      position: "Manager",
-      image: "/foto/radianto.jpeg",
+      name: "Michael Chen",
+      position: "Quality Manager",
+      image: "/team/manager.jpg",
+      bio: "Certified Q Grader",
     },
   ];
 
-  const values = [
+  const services = [
     {
       icon: Coffee,
-      title: "Robusta Coffee Bean Distribution",
+      title: "Premium Coffee Distribution",
       description:
-        "Supplying green Robusta beans in multiple grades (1-5) that meet international export requirements.",
-      color: "from-yellow-400 to-amber-500",
+        "Supplying green Robusta beans in multiple grades that meet international export standards.",
+      color: "from-amber-400 to-amber-600",
     },
     {
       icon: Award,
       title: "Quality Grading & Selection",
       description:
-        "Careful classification based on size, weight, and appearance to guarantee premium quality beans.",
-      color: "from-green-400 to-emerald-500",
+        "Meticulous classification based on size, weight, and appearance to guarantee premium quality.",
+      color: "from-green-400 to-emerald-600",
     },
     {
       icon: Leaf,
-      title: "Consistent Supply Management",
+      title: "Sustainable Supply Chain",
       description:
-        "Ensuring a reliable year-round coffee supply through partnerships with farmers across different regions.",
-      color: "from-blue-400 to-indigo-500",
+        "Ensuring reliable year-round coffee supply through partnerships with farmers across Indonesia.",
+      color: "from-blue-400 to-cyan-600",
     },
     {
       icon: Store,
-      title: "Processing & Storage Facilities",
+      title: "Storage & Processing",
       description:
-        "Well-placed warehouses near farms and ports to preserve freshness and streamline distribution.",
-      color: "from-red-400 to-pink-500",
+        "Strategic warehouses near farms and ports to preserve freshness and streamline distribution.",
+      color: "from-purple-400 to-violet-600",
     },
   ];
 
   const stats = [
-    { number: "3+", label: "Years of Experience", icon: Calendar },
-    { number: "10K+", label: "Happy Customers", icon: Users },
-    { number: "50+", label: "Coffee Varieties", icon: Coffee },
-    { number: "15+", label: "Awards & Certificates", icon: Trophy },
+    { number: "15+", label: "Years of Excellence", icon: Calendar },
+    { number: "50+", label: "Global Partners", icon: Users },
+    { number: "14+", label: "Coffee Varieties", icon: Coffee },
+    { number: "25+", label: "Awards Won", icon: Trophy },
+  ];
+
+  const companyValues = [
+    {
+      icon: Shield,
+      title: "Integrity",
+      description:
+        "Our business is built on trust. With transparency, honesty, and unwavering ethics at every step — from farm partnerships to global distribution — we ensure every cup reflects our true values.",
+      features: [
+        "Transparent Pricing",
+        "Honest Communication",
+        "Ethical Business",
+      ],
+      image: "/foto/bg2.jpg",
+    },
+    {
+      icon: Leaf,
+      title: "Sustainability",
+      description:
+        "More than just coffee — we cultivate a future. Through sustainable farming and responsible business practices, we safeguard nature while empowering coffee farmers and enriching their communities.",
+      features: [
+        "Eco-Friendly Farming",
+        "Community Empowerment",
+        "Carbon Neutral",
+      ],
+      image: "/foto/bg1.jpg",
+    },
+    {
+      icon: TrendingUp,
+      title: "Excellence",
+      description:
+        "Excellence without compromise. We deliver coffee of consistent quality and reliable volume, backed by precise systems and efficient processes — ensuring the world experiences Indonesian coffee at its finest, every time.",
+      features: ["Quality Assurance", "Reliable Delivery", "Premium Standards"],
+      image: "/foto/bg3.jpg",
+    },
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-32 overflow-hidden">
         {/* Background image */}
-        <Image
-          src="/foto/bg1.jpg"
-          alt="Rabha Mitra Sejahtera Background"
-          fill
-          priority
-          className="object-cover object-center"
-        />
+        <div className="absolute inset-0">
+          <img
+            src="/foto/bg1.jpg"
+            alt="Arta Coffee Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/90 via-emerald-900/80 to-green-800/70" />
+        <div className="absolute inset-0 bg-linear-to-br from-amber-950/95 via-amber-900/90 to-amber-800/85" />
 
         {/* Decorative blobs */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400/40 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-500/40 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-amber-400/20 rounded-full blur-3xl animate-pulse" />
+          <div
+            className="absolute bottom-20 right-10 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
         </div>
 
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-emerald-700/30 shadow-lg">
-            <HomeIcon className="w-5 h-5 text-yellow-400 mr-2" />
-            <span className="text-emerald-200 font-medium">
-              About Rabha Mitra Sejahtera
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-amber-300/30">
+            <Coffee className="w-5 h-5 text-amber-300 mr-2" />
+            <span className="text-amber-100 font-medium">
+              About Arta Coffee
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-            ABOUT
-            <span className="text-transparent bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text block">
-              CV RABHA MITRA SEJAHTERA
+          {/* Main Heading */}
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Crafting Excellence
+            <span className="block text-transparent bg-linear-to-r from-amber-300 via-yellow-400 to-amber-300 bg-clip-text">
+              Since Day One
             </span>
           </h1>
 
-          <p className="text-xl text-emerald-200 max-w-3xl mx-auto mb-12 leading-relaxed flex items-center gap-2 justify-center">
-            <ArrowDown className="w-6 h-6 animate-bounce" />
-            Scroll Down
-            <ArrowDown className="w-6 h-6 animate-bounce" />
+          <p className="text-xl md:text-2xl text-amber-100 max-w-3xl mx-auto mb-12 leading-relaxed">
+            A journey of passion, quality, and commitment to bringing
+            Indonesia's finest coffee to the world
           </p>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          {/* Scroll Indicator */}
+          <div className="flex items-center justify-center gap-2 text-amber-300 animate-bounce">
+            <ArrowDown className="w-6 h-6" />
+            <span className="font-medium">Discover Our Story</span>
+            <ArrowDown className="w-6 h-6" />
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-12 bg-linear-to-b from-amber-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map(({ number, label, icon: Icon }) => (
-              <div key={label} className="text-center">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-emerald-700/30 shadow-lg hover:scale-105 transition-transform duration-500">
-                  <Icon className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
-                  <div className="text-3xl font-bold text-white mb-2">
-                    {number}
-                  </div>
-                  <div className="text-emerald-300 text-sm font-medium">
-                    {label}
-                  </div>
+              <div
+                key={label}
+                className="bg-white rounded-2xl p-6 shadow-lg border border-amber-100 text-center hover:scale-105 transition-transform duration-300"
+              >
+                <Icon className="w-10 h-10 text-amber-600 mx-auto mb-3" />
+                <div className="text-4xl font-bold text-amber-950 mb-2">
+                  {number}
+                </div>
+                <div className="text-amber-800 text-sm font-medium">
+                  {label}
                 </div>
               </div>
             ))}
@@ -134,101 +192,130 @@ const ProfilePage = () => {
         </div>
       </section>
 
-      {/* Content Sections */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center lg:text-left">
-        {/* Our Story Section */}
-        <div className="space-y-16 animate-fadeIn my-32">
+      {/* Our Story Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Content */}
             <div>
-              <h2 className="text-4xl font-bold text-green-900 mb-8">
-                Our Story
+              <div className="inline-flex items-center bg-amber-100 rounded-full px-4 py-2 mb-6">
+                <span className="text-amber-900 font-semibold text-sm">
+                  Our Journey
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-amber-950 mb-6">
+                The Story Behind{" "}
+                <span className="text-amber-700">Arta Coffee</span>
               </h2>
-              <div className="space-y-6 text-green-800 leading-relaxed">
+              <div className="w-24 h-1 bg-linear-to-r from-amber-600 to-amber-400 rounded-full mb-8" />
+
+              <div className="space-y-6 text-amber-900 leading-relaxed">
                 <p className="text-lg">
-                  The story of CV Rabha Mitra Sejahtera began with a strong
-                  friendship that developed during their junior high school
-                  years in 1992. Both founders subsequently followed parallel
-                  career paths, entering the same business sector, specifically
-                  the agricultural commodity of coffee, starting as coffee
-                  brokers in 2006.
+                  Founded with a passion for exceptional coffee and a commitment
+                  to Indonesian farmers, Arta Coffee began as a vision to bridge
+                  the gap between local producers and global markets.
                 </p>
                 <p className="text-lg">
-                  Over the years, their experience and knowledge in the coffee
-                  industry continued to grow. Driven by a shared vision and
-                  mission to establish a larger, more professional, and
-                  globally-oriented business, they decided to form a formal
-                  entity.
+                  Over the years, our experience and knowledge in the coffee
+                  industry continued to grow. Driven by a shared vision to
+                  establish a larger, more professional, and globally-oriented
+                  business, we evolved into a leading exporter of premium
+                  Indonesian Robusta.
                 </p>
                 <p className="text-lg">
-                  Thus, on February 18, 2022, CV Rabha Mitra Sejahtera was
-                  officially founded. The company aims to bring the finest
-                  quality Indonesian coffee, especially Lampung Robusta coffee,
-                  to the world market.
+                  Today, Arta Coffee stands as a testament to quality,
+                  sustainability, and fair trade. We bring the finest Indonesian
+                  coffee, especially premium Robusta beans, to discerning
+                  customers worldwide.
                 </p>
+              </div>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/product"
+                  className="px-6 py-3 bg-amber-900 text-white rounded-full font-bold hover:bg-amber-800 transition-all duration-300 hover:scale-105 text-center"
+                >
+                  View Products
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-6 py-3 bg-white border-2 border-amber-900 text-amber-900 rounded-full font-bold hover:bg-amber-50 transition-all duration-300 hover:scale-105 text-center"
+                >
+                  Contact Us
+                </Link>
               </div>
             </div>
 
-            <div className="relative flex justify-center">
-              <Image
-                width={500}
-                height={500}
-                src="/foto/hero-profile.jpg"
-                alt="Premium Coffee Story"
-                className="rounded-3xl shadow-2xl w-full h-96 object-cover"
-              />
-              <div className="absolute -bottom-6 bg-gradient-to-r from-yellow-400 to-amber-500 text-green-900 p-6 rounded-2xl shadow-2xl">
-                <div className="text-center">
-                  <Calendar className="w-10 h-10 mx-auto mb-2" />
-                  <p className="font-bold text-lg">Since 2022</p>
-                  <p className="text-sm opacity-80">3 Years of Journey</p>
-                </div>
+            {/* Image */}
+            <div className="relative">
+              <div className="relative aspect-4/3 rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="/foto/hero-home.jpeg"
+                  alt="Arta Coffee Story"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Floating Badge */}
+              <div className="absolute -bottom-6 -right-6 bg-amber-400 text-amber-950 p-6 rounded-2xl shadow-2xl">
+                <Calendar className="w-10 h-10 mb-2" />
+                <p className="font-bold text-xl">Est. 2010</p>
+                <p className="text-sm">Excellence Since</p>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Vision & Mission Section */}
-        <div className="space-y-16 animate-fadeIn my-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 text-center lg:text-left">
+      {/* Vision & Mission Section */}
+      <section className="py-20 bg-linear-to-b from-amber-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-950 mb-4">
+              Vision & <span className="text-amber-700">Mission</span>
+            </h2>
+            <div className="w-24 h-1 bg-linear-to-r from-amber-600 to-amber-400 mx-auto rounded-full" />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Vision */}
-            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 hover:from-white/15 hover:to-white/10 transition-all duration-500 shadow-xl">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-green-900 mb-2">
-                  Our Vision
-                </h3>
-                <div className="w-16 h-1 bg-gradient-to-r from-green-700 to-green-500 mx-auto rounded-full"></div>
-              </div>
-              <div className="text-center">
-                <p className="text-xl text-green-800 leading-relaxed font-medium italic">
-                  &quot;To become a global company in providing Indonesian
-                  Robusta coffee&quot;
+            <div className="bg-linear-to-br from-amber-950 to-amber-900 rounded-3xl p-10 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-amber-400/10 rounded-full blur-3xl" />
+              <div className="relative z-10">
+                <div className="flex items-center mb-6">
+                  <div className="w-14 h-14 bg-amber-400 rounded-2xl flex items-center justify-center mr-4">
+                    <Eye className="w-7 h-7 text-amber-950" />
+                  </div>
+                  <h3 className="text-3xl font-bold text-white">Our Vision</h3>
+                </div>
+                <p className="text-xl text-amber-100 leading-relaxed italic">
+                  "To become the world's most trusted partner in providing
+                  premium Indonesian Robusta coffee, setting the standard for
+                  quality, sustainability, and ethical trade."
                 </p>
               </div>
             </div>
 
             {/* Mission */}
-            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 hover:from-white/15 hover:to-white/10 transition-all duration-500 shadow-xl">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-green-900 mb-2">
+            <div className="bg-linear-to-br from-white to-amber-50 rounded-3xl p-10 border-2 border-amber-200">
+              <div className="flex items-center mb-6">
+                <div className="w-14 h-14 bg-amber-600 rounded-2xl flex items-center justify-center mr-4">
+                  <Target className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-3xl font-bold text-amber-950">
                   Our Mission
                 </h3>
-                <div className="w-16 h-1 bg-gradient-to-r from-green-700 to-green-500 mx-auto rounded-full"></div>
               </div>
-
-              <ul className="space-y-4 text-center">
+              <ul className="space-y-4">
                 {[
-                  "Provide high-quality Robusta coffee sourced directly from farmers",
-                  "Support farmers by ensuring quality control so they can compete in the global market",
-                  "Promote sustainable farming systems with environmental conservation awareness",
-                  "Deliver outstanding customer experiences at every interaction",
-                  "Continuously innovate in technology and production processes",
+                  "Provide high-quality Robusta coffee sourced directly from Indonesian farmers",
+                  "Support farmers through fair trade and quality control practices",
+                  "Promote sustainable and eco-friendly farming systems",
+                  "Deliver exceptional customer experiences at every touchpoint",
+                  "Continuously innovate in processing and logistics",
                 ].map((mission, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start justify-center group"
-                  >
-                    <CheckCircle className="w-6 h-6 text-green-700 mr-3 mt-1 flex-shrink-0 group-hover:text-green-900 transition-colors duration-200" />
-                    <span className="text-green-800 font-medium leading-relaxed group-hover:text-green-900 transition-colors duration-200">
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-amber-600 mr-3 mt-1 shrink-0" />
+                    <span className="text-amber-900 leading-relaxed">
                       {mission}
                     </span>
                   </li>
@@ -237,173 +324,186 @@ const ProfilePage = () => {
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Team Section */}
-        <div className="space-y-16 animate-fadeIn my-32">
+      {/* Services Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-green-900 mb-6">Our Team</h2>
-            <p className="text-xl text-green-700 max-w-3xl mx-auto">
-              Behind every premium coffee, there is an experienced team
-              dedicated to delivering the best for you.
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-950 mb-4">
+              Our <span className="text-amber-700">Services</span>
+            </h2>
+            <div className="w-24 h-1 bg-linear-to-r from-amber-600 to-amber-400 mx-auto rounded-full mb-6" />
+            <p className="text-xl text-amber-800 max-w-3xl mx-auto">
+              Comprehensive solutions that ensure quality from farm to cup
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
-            {team.map((member, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, idx) => (
               <div
-                key={member.name}
-                className="group relative bg-white rounded-3xl p-8 shadow-md hover:shadow-2xl 
-              border border-green-100 transition-all duration-500 hover:-translate-y-2 w-full max-w-xs"
-                style={{ animationDelay: `${index * 150}ms` }}
+                key={service.title}
+                className="bg-linear-to-br from-amber-50 to-amber-100/50 rounded-3xl p-8 border border-amber-200 hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+                style={{ animationDelay: `${idx * 100}ms` }}
               >
                 <div
-                  className="absolute inset-0 rounded-3xl bg-gradient-to-br from-green-100/40 via-emerald-100/40 to-green-200/40 
-                opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                />
-                <div className="relative z-10 flex flex-col items-center text-center space-y-4">
-                  {member.image ? (
-                    <div className="relative w-20 h-20 rounded-full overflow-hidden shadow-md">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  ) : (
-                    <div className="w-20 h-20 flex items-center justify-center rounded-full bg-green-100 text-green-800 font-bold text-2xl shadow-md">
-                      {member.name.charAt(0)}
-                    </div>
-                  )}
-                  <div>
-                    <h3 className="text-xl font-bold text-green-900 group-hover:text-emerald-700 transition-colors">
-                      {member.name}
-                    </h3>
-                    <p className="text-yellow-600 font-medium tracking-wide uppercase text-sm">
-                      {member.position}
-                    </p>
-                  </div>
+                  className={`w-16 h-16 rounded-2xl bg-linear-to-br ${service.color} flex items-center justify-center mb-6`}
+                >
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Services Section */}
-        <div className="space-y-16 animate-fadeIn my-32">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-green-900 mb-6">
-              Our Services
-            </h2>
-            <p className="text-xl text-green-700 max-w-3xl mx-auto">
-              The fundamental values that guide every decision and action in
-              delivering the finest robusta coffee.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-            {values.map((value) => (
-              <div
-                key={value.title}
-                className="group bg-white rounded-3xl p-8 shadow-xl border border-green-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 w-full max-w-md"
-              >
-                <div className="text-center mb-6">
-                  <div
-                    className={`w-20 h-20 bg-gradient-to-r  rounded-2xl flex items-center justify-center mx-auto mb-4  group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <value.icon className="w-10 h-10 text-green-900" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-green-900">
-                    {value.title}
-                  </h3>
-                </div>
-                <p className="text-green-700 leading-relaxed text-center">
-                  {value.description}
+                <h3 className="text-2xl font-bold text-amber-950 mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-amber-800 leading-relaxed">
+                  {service.description}
                 </p>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
+      {/* Company Values Section */}
+      <section className="py-20 bg-linear-to-b from-amber-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-green-900 mb-6">
-              Our Company Values
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-950 mb-4">
+              Our Core <span className="text-amber-700">Values</span>
             </h2>
+            <div className="w-24 h-1 bg-linear-to-r from-amber-600 to-amber-400 mx-auto rounded-full mb-6" />
+            <p className="text-xl text-amber-800 max-w-3xl mx-auto">
+              The principles that guide everything we do
+            </p>
           </div>
 
-          {/* Content */}
           <div className="space-y-16">
-            {[
-              {
-                title: "Integrity",
-                description:
-                  "Our business is built on trust. With transparency, honesty, and unwavering ethics at every step — from farm partnerships to global distribution — we ensure every cup reflects our true values.",
-                features: "Trust • Transparency • Ethics",
-                image: "/foto/bg2.jpg",
-                reverse: true,
-              },
-              {
-                title: "Sustainability",
-                description:
-                  "More than just coffee — we cultivate a future. Through sustainable farming and responsible business practices, we safeguard nature while empowering coffee farmers and enriching their communities.",
-                features: "People • Planet • Prosperity",
-                image: "/foto/bg1.jpg",
-                reverse: false,
-              },
-              {
-                title: "Consistency",
-                description:
-                  "Excellence without compromise. We deliver coffee of consistent quality and reliable volume, backed by precise systems and efficient processes — ensuring the world experiences Indonesian coffee at its finest, every time.",
-                features: "Excellence • Reliability • Timeliness",
-                image: "/foto/bg3.jpg",
-                reverse: true,
-              },
-            ].map(({ title, description, features, image, reverse }) => (
+            {companyValues.map((value, idx) => (
               <div
-                key={title}
-                className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8"
+                key={value.title}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                  idx % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+                }`}
               >
-                <div
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                    reverse ? "lg:grid-flow-col-dense" : ""
-                  }`}
-                >
-                  {/* Text */}
-                  <div
-                    className={`${
-                      reverse ? "lg:col-start-2" : ""
-                    } text-center lg:text-left`}
-                  >
-                    <h3 className="text-3xl font-bold text-green-900 mb-6">
-                      {title}
-                    </h3>
-                    <p className="text-green-700 leading-relaxed mb-6">
-                      {description}
-                    </p>
-                    <p className="text-green-800 font-semibold">{features}</p>
-                  </div>
-
-                  {/* Image */}
-                  <div className={reverse ? "lg:col-start-1" : ""}>
-                    <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-lg">
-                      <Image
-                        src={image}
-                        alt={title}
-                        fill
-                        className="object-cover object-center"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                        priority={true}
-                      />
+                {/* Content */}
+                <div className={idx % 2 === 1 ? "lg:col-start-2" : ""}>
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-linear-to-br from-amber-600 to-amber-700 rounded-2xl flex items-center justify-center mr-4">
+                      <value.icon className="w-8 h-8 text-white" />
                     </div>
+                    <h3 className="text-3xl font-bold text-amber-950">
+                      {value.title}
+                    </h3>
+                  </div>
+                  <p className="text-lg text-amber-800 leading-relaxed mb-6">
+                    {value.description}
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    {value.features.map((feature) => (
+                      <span
+                        key={feature}
+                        className="px-4 py-2 bg-amber-100 text-amber-900 rounded-full text-sm font-semibold"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Image */}
+                <div className={idx % 2 === 1 ? "lg:col-start-1" : ""}>
+                  <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl">
+                    <img
+                      src={value.image}
+                      alt={value.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-950 mb-4">
+              Meet Our <span className="text-amber-700">Team</span>
+            </h2>
+            <div className="w-24 h-1 bg-linear-to-r from-amber-600 to-amber-400 mx-auto rounded-full mb-6" />
+            <p className="text-xl text-amber-800 max-w-3xl mx-auto">
+              Behind every exceptional coffee is a team of passionate
+              professionals
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {team.map((member, idx) => (
+              <div
+                key={member.name}
+                className="group bg-linear-to-br from-amber-50 to-amber-100/50 rounded-3xl p-8 text-center hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-amber-200"
+                style={{ animationDelay: `${idx * 100}ms` }}
+              >
+                {/* Avatar */}
+                <div className="relative w-32 h-32 mx-auto mb-6">
+                  <div className="w-full h-full rounded-full bg-linear-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
+                    {member.name.charAt(0)}
+                  </div>
+                  <div className="absolute inset-0 rounded-full bg-linear-to-br from-amber-300 to-amber-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                </div>
+
+                {/* Info */}
+                <h3 className="text-2xl font-bold text-amber-950 mb-2">
+                  {member.name}
+                </h3>
+                <p className="text-amber-700 font-semibold mb-3">
+                  {member.position}
+                </p>
+                <p className="text-amber-800 text-sm">{member.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-linear-to-br from-amber-950 to-amber-900 relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-amber-400/10 rounded-full blur-3xl animate-pulse" />
+          <div
+            className="absolute bottom-20 right-10 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Heart className="w-16 h-16 text-amber-300 mx-auto mb-6" />
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Join Our Coffee Journey
+          </h2>
+          <p className="text-xl text-amber-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Experience the difference of premium Indonesian Robusta. Partner
+            with us today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-amber-400 text-amber-950 rounded-full font-bold text-lg hover:bg-amber-300 transition-all duration-300 hover:scale-105 shadow-xl"
+            >
+              Get in Touch
+            </Link>
+            <Link
+              href="/product"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
+            >
+              View Products
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
