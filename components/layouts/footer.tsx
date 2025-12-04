@@ -1,14 +1,14 @@
-import Link from "next/link";
+import { navigationData } from "@/data/navigation";
 import {
   Coffee,
-  Mail,
-  Phone,
-  MapPin,
   Facebook,
   Instagram,
   Linkedin,
+  Mail,
+  MapPin,
+  Phone,
 } from "lucide-react";
-import { navigationData } from "@/data/navigation";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

@@ -2,19 +2,19 @@
 
 import { productsData } from "@/data/product";
 import {
+  CheckCircle,
   ChevronLeft,
   ChevronRight,
   Coffee,
-  MapPin,
-  MessageCircle,
-  Search,
-  Trophy,
-  X,
-  Package,
-  Ship,
   CreditCard,
   Info,
-  CheckCircle,
+  MapPin,
+  MessageCircle,
+  Package,
+  Search,
+  Ship,
+  Trophy,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

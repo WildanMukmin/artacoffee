@@ -1,12 +1,12 @@
 "use client";
 
 import {
-  Coffee,
-  X,
   ChevronLeft,
   ChevronRight,
+  Coffee,
   Image as ImageIcon,
   Video,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

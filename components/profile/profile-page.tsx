@@ -6,15 +6,15 @@ import {
   Calendar,
   CheckCircle,
   Coffee,
+  Eye,
+  Heart,
   Leaf,
+  Shield,
   Store,
+  Target,
+  TrendingUp,
   Trophy,
   Users,
-  Target,
-  Eye,
-  Shield,
-  TrendingUp,
-  Heart,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

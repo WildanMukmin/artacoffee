@@ -1,7 +1,7 @@
 import Footer from "@/components/layouts/footer";
 import Header from "@/components/layouts/header";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "-",
     // yandex: "your-yandex-verification-code",
     // bing: "your-bing-verification-code",
   },
@@ -117,7 +117,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="min-h-screen bg-[#F5F5DC]">
+        <div className="min-h-screen bg-cream">
           <Header />
           <main>{children}</main>
           <Footer />

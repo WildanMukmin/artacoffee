@@ -3,17 +3,16 @@
 import {
   Award,
   ExternalLink,
-  Globe,
-  Star,
-  Instagram,
   Facebook,
+  FileText,
+  Globe,
+  Instagram,
   Linkedin,
   Mail,
-  Phone,
   MapPin,
-  ShoppingBag,
-  FileText,
   MessageCircle,
+  ShoppingBag,
+  Star,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

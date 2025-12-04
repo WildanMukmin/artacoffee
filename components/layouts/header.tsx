@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { Menu, X, Coffee } from "lucide-react";
 import { navigationData } from "@/data/navigation";
+import { Coffee, Menu, X } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

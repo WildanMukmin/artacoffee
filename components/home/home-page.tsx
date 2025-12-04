@@ -1,29 +1,23 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import {
-  Coffee,
   Award,
-  Leaf,
-  Store,
-  Globe,
-  Package,
-  Handshake,
-  Mountain,
-  Sprout,
-  Thermometer,
-  CloudRain,
-  MapPin,
-  Calendar,
-  Info,
   CheckCircle,
   ChevronRight,
-  TrendingUp,
-  Shield,
+  Coffee,
+  Globe,
+  Handshake,
   Heart,
+  Info,
+  Leaf,
+  Package,
+  Shield,
+  Store,
+  TrendingUp,
 } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
