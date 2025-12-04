@@ -149,12 +149,6 @@ export default function Footer() {
               >
                 Terms of Service
               </Link>
-              <Link
-                href="/sitemap"
-                className="text-amber-300 hover:text-white transition-colors"
-              >
-                Sitemap
-              </Link>
             </div>
           </div>
         </div>

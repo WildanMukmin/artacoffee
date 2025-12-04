@@ -16,6 +16,7 @@ import {
   Info,
   CheckCircle,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
@@ -115,7 +116,9 @@ const ProductPage = () => {
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <Image
+            width={400}
+            height={400}
             src="/foto/bg3.jpg"
             alt="Products Background"
             className="w-full h-full object-cover"
@@ -189,7 +192,9 @@ const ProductPage = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative overflow-hidden aspect-square bg-linear-to-br from-amber-100 to-amber-200">
-                  <img
+                  <Image
+                    width={400}
+                    height={400}
                     src={product.images[0]}
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -259,7 +264,9 @@ const ProductPage = () => {
               {/* Product Images */}
               <div className="lg:w-1/2 p-6 bg-linear-to-br from-amber-50 to-amber-100">
                 <div className="relative">
-                  <img
+                  <Image
+                    width={400}
+                    height={400}
                     src={selectedProduct.images[currentImageIndex]}
                     alt={selectedProduct.name}
                     className="w-full h-96 object-cover rounded-2xl shadow-lg"
@@ -295,7 +302,9 @@ const ProductPage = () => {
                             : "border-amber-200 hover:border-amber-400"
                         }`}
                       >
-                        <img
+                        <Image
+                          width={400}
+                          height={400}
                           src={image}
                           alt={`${selectedProduct.name} ${index + 1}`}
                           className="w-full h-full object-cover"

@@ -16,6 +16,7 @@ import {
   TrendingUp,
   Heart,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const ProfilePage = () => {
@@ -119,7 +120,9 @@ const ProfilePage = () => {
       <section className="relative py-32 overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0">
-          <img
+          <Image
+            width={400}
+            height={400}
             src="/foto/bg1.jpg"
             alt="Arta Coffee Background"
             className="w-full h-full object-cover"
@@ -249,7 +252,9 @@ const ProfilePage = () => {
             {/* Image */}
             <div className="relative">
               <div className="relative aspect-4/3 rounded-3xl overflow-hidden shadow-2xl">
-                <img
+                <Image
+                  width={400}
+                  height={400}
                   src="/foto/hero-home.jpeg"
                   alt="Arta Coffee Story"
                   className="w-full h-full object-cover"
@@ -412,7 +417,9 @@ const ProfilePage = () => {
                 {/* Image */}
                 <div className={idx % 2 === 1 ? "lg:col-start-1" : ""}>
                   <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl">
-                    <img
+                    <Image
+                      width={400}
+                      height={400}
                       src={value.image}
                       alt={value.title}
                       className="w-full h-full object-cover"

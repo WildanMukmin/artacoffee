@@ -48,10 +48,10 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/linktree"
               className="ml-4 px-6 py-2 rounded-full font-semibold bg-amber-300 text-amber-950 hover:bg-amber-200 transition-all hover:scale-105 shadow-lg"
             >
-              Get Quote
+              Contact Us
             </Link>
           </nav>
 
@@ -84,11 +84,11 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                href="/contact"
+                href="/linktree"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mx-4 mt-2 px-6 py-3 bg-amber-300 text-amber-950 text-center rounded-full font-semibold hover:bg-amber-200 transition-colors"
               >
-                Get Quote
+                Contact Us
               </Link>
             </div>
           </nav>
